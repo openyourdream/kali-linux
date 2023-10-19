@@ -1,0 +1,26 @@
+
+
+curl -fsSL https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/gpg | sudo apt-key add -
+echo 'deb https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/ buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt-get update
+# 卸载旧的安装
+sudo apt-get remove docker docker-engine docker.io
+sudo apt-get install docker-ce
+sudo systemctl status docker
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# install docker compose
+#下载离线安装包地址
+# https://github.com/docker/compose/releases
+#下载的安装包文件
+#docker-compose-linux-x86_64
+#执行安装命令
+mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+#执行权限
+chmod +x /usr/local/bin/docker-compose
+#检测安装成功
+docker-compose --version
+
+
+https://gitee.com/mudongliang/s2_demo

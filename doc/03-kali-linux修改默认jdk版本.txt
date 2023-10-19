@@ -1,0 +1,7 @@
+
+update-alternatives --install /usr/bin/java java /usr/local/jdk1.8.0_311/bin/java 300
+update-alternatives --install /usr/bin/javac javac /usr/local/jdk1.8.0_311/bin/javac 300
+
+update-alternatives --config java
+update-alternatives --config javac
+
